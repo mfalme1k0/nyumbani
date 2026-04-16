@@ -1,0 +1,19 @@
+{
+  "name": "nyumbani",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace backend run dev",
+    "dev:frontend": "npm --workspace frontend run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start:backend": "npm --workspace backend run start",
+    "start:frontend": "npm --workspace frontend run start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
